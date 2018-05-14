@@ -5,6 +5,28 @@
     <title>Meme Creator</title>
 </head>
 <body>
+<header id="main-header">
 
+		<a id="logo-header" href="#">
+			<span class="site-name">The meme Project</span>
+			<span class="site-desc">Web 2.0 FTW</span>
+		</a> <!-- / #logo-header -->
+
+		<nav>
+			<ul>
+				<li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+				<li><a href="{% url 'profile' %}">Perfil</a></li>
+			</ul>
+		</nav><!-- / nav -->
+                <h1>Meme Creator</h1>
+                    {% if user.is_authenticated %}
+                       Hola, {{user.username}}
+                    {% else %}
+                        <h2>Has d'estar loggejat per a utilitzar el Meme Creator</h2>
+                    {% endif %}
+
+        </meme>
+	</header><!-- / #main-header -->
 </body>
 </html>
